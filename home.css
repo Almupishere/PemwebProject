@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("asset/font/resident_evil_4_remake_fonts.ttf") format("truetype");
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  font-family: "CustomFont", sans-serif;
+  background-image: url("asset/background/bg home.jpg");
+  height: 100vh; /*Menyesuaikan tinggi body agar 100% viewport height */
+  background-size: cover; /* Menyesuaikan ukuran gambar agar menutupi seluruh layar */
+}
+
+.navbar {
+  font-family: "Castoro Titling", sans-serif; /* Menggunakan font dari Google Fonts */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+.navbar-nav {
+  display: flex;
+}
+.navbar-nav a {
+  display: inline-block;
+  align-items: center;
+  color: aliceblue;
+  margin: 30px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+.navbar-extra {
+  margin: 30px;
+}
+
+.navbar-extra a {
+  font-family: "Castoro Titling", sans-serif; /* Menggunakan font dari Google Fonts */
+  text-decoration: none;
+  color: aliceblue;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-extra a:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+button {
+  background-color: #7d1416;
+  padding: 8px 20px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Menambahkan transisi */
+}
+
+button:hover {
+  color: rgb(31, 31, 31); /* Warna teks berubah saat hover */
+  transform: scale(1.1); /* Efek pembesaran saat hover */
+}
+
+img {
+  width: 450px;
+  margin: 10px;
+}
+h1 {
+  color: aliceblue;
+  font-size: 5rem;
+}
+.title {
+  margin: 40vh 25vh;
+}
+
+.container {
+  border: 1px solid;
+  height: 100%;
+  width: 100%;
+}
+
+.section {
+  border: 1px solid;
+  height: 100vh;
+  width: 100%;
+}
+
+.section2 {
+  background-color: violet;
+  border: 1px solid;
+  height: 100%;
+  width: 100%;
+}

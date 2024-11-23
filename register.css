@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+body {
+  background-image: url("asset/background/bg sign up.png");
+  height: 100vh;
+  background-size: cover; /* Menyesuaikan ukuran gambar agar menutupi seluruh layar */
+  color: aliceblue;
+}
+.header {
+  height: 70px;
+  width: 100%;
+}
+.header img {
+  width: 120px;
+  margin: 2rem 2rem;
+}
+.form {
+  width: 100%;
+  height: calc(100vh - 70px); /*Menyesuaikan tinggi agar 100% viewport height */
+  text-align: right;
+  padding: 4rem 2rem;
+}
+.form,
+a,
+h1 {
+  color: aliceblue;
+  font-family: "Cinzel", sans-serif;
+}
+h1 {
+  font-size: 52px;
+}
+p {
+  font-family: "Crimson Pro", sans-serif; /* Menggunakan font dari Google Fonts */
+}
+
+input {
+  color: aliceblue;
+  font-family: "Inter", sans-serif;
+  width: 300px;
+  border-bottom: 1px solid;
+  border-color: aliceblue;
+  background: none;
+  text-align: right;
+}
+
+button {
+  text-decoration: none;
+  background-color: #7d1416;
+  width: 300px;
+  margin-top: 1.5rem;
+  padding: 8px 20px;
+}
