@@ -40,19 +40,28 @@ p {
 }
 
 input {
-  color: aliceblue;
-  font-family: "Inter", sans-serif;
-  width: 300px;
-  border-bottom: 1px solid;
-  border-color: aliceblue;
-  background: none;
-  text-align: right;
+  color: aliceblue; /* Warna teks */
+  font-family: "Inter", sans-serif; /* Font family */
+  width: 300px; /* Lebar input */
+  border: none; /* Hapus semua border default */
+  border-bottom: 1px solid aliceblue; /* Garis bawah */
+  background-color: black; /* Warna latar belakang hitam */
+  text-align: left; /* Teks rata kiri (default) */
+  padding: 5px; /* Tambahkan padding untuk kenyamanan */
 }
 
-button {
+input::placeholder {
+  color: aliceblue; /* Warna placeholder */
+  opacity: 0.7; /* Placeholder lebih transparan */
+}
+
+
+.button {
   text-decoration: none;
   background-color: #7d1416;
   width: 300px;
   margin-top: 1.5rem;
   padding: 8px 20px;
+  border: none;
+  text-align: center;
 }
