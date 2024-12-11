@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url("asset/background/bg sign in.png");
+  background-image: url("asset/SIGN UP OR IN/bg sign in.png");
   height: 100vh;
   background-size: cover; /* Menyesuaikan ukuran gambar agar menutupi seluruh layar */
   color: aliceblue;
@@ -57,5 +57,3 @@ button {
   margin-top: 1.5rem;
   padding: 8px 20px;
 }
-
-

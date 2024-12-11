@@ -16,14 +16,6 @@ if (isset($_GET['logout'])) {
 }
 ?>
 
-<style>
-  .download{
-    color: aliceblue;
-    font-family: "Castoro Titling", sans-serif;
-    margin-top: 30px;
-  }
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,47 +27,42 @@ if (isset($_GET['logout'])) {
       href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="stylehome.css" />
     <script src="home.js"></script>
   </head>
   <body>
     <div class="container">
-      <nav class="navbar">
-        <div class="navbar-nav">
-          <a href="#topics">Topics</a>
-          <a href="#about">About</a>
-          <a href="">Character</a>
-          <a href="">Location</a>
-          <a href="">Gameplay</a>
+      <div class="section">
+        <nav class="navbar">
+          <div class="navbar-nav">
+            <a href="#topics">Topics</a>
+            <a href="#story">Story</a>
+            <a href="#character">Character</a>
+            <a href="#location">Location</a>
+            <a href="#gameplay">Gameplay</a>
+            <?php if ($islogin):?>
+            <?php else: ?>
+              <p class="download">Download</p>
+            <?php endif; ?>
+          </div>
           <?php if ($islogin):?>
-          <a href="">Download</a>
-          <?php else: ?>
-            <p class="download">Download</p>
+          <div class="navbar-extra">
+            <button><a href="?logout=true"><?= htmlspecialchars($username) ?></a></button>
+          </div>
+          <?php else :?>
+          <div class="navbar-extra">
+            <button><a href="login.php">Login</a></button>
+          </div>
           <?php endif; ?>
-        </div>
-        <?php if ($islogin):?>
-        <div class="navbar-extra">
-          <button><a href="?logout=true"><?= htmlspecialchars($username) ?></a></button>
-        </div>
-        <?php else :?>
-        <div class="navbar-extra">
-          <button><a href="login.php">Login</a></button>
-        </div>
-        <?php endif; ?>
-      </nav>
-
-      <div id="topics" class="section">
+        </nav>
         <div class="title">
-          <h1>Welcome to the</h1>
-          <img src="logo-re.svg" />
+          <h1>Welcome to the <br/>
+          <img src="logo-re.svg" /></h1>
+        </div>
+        <div class="footer">
+          <p>&copy; 2024 CAPCOM. All Rights Reserved.</p>
+          <img src="asset/logo/capcom.png" alt="Capcom Logo" />
         </div>
       </div>
-
-      <div id="about" class="section2"></div>
-      <div id="char" class="section3"></div>
-      <div id="loc" class="section4"></div>
-      <div id="gplay" class="section5"></div>
-      <div id="download" class="section6"></div>
-    </div>
   </body>
 </html>
