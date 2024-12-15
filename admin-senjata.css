@@ -1,52 +1,79 @@
 @font-face {
-    font-family: "CustomFont";
-    src: url("asset/font/FONT RE4.ttf") format("truetype");
-    font-weight: 700;
-  }
-  
-  body{
-    background-color: rgb(95, 95, 95);
-  }
-  /* Navbar Style Start */
-  .navbar {
-    font-family: "Castoro Titling", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99999;
-  }
-  .navbar-nav a {
-    display: inline-block;
-    align-items: center;
-    color: white;
-    margin: 30px;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .navbar-nav a:hover {
-    text-shadow: 1px 1px 2px rgb(255, 255, 255);
-    color: rgb(30, 30, 30);
-    transform: scale(1.1);
-  }
-  .navbar-extra button {
-    background: #7d1416;
-    color: white;
-    padding: 8px 20px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  .navbar-extra button:hover {
-    transform: scale(1.1);
-  }
-  .navbar-extra button a {
-    font-family: "Castoro Titling", sans-serif;
-    text-decoration: none;
-    color: white;
-  }
-  /* Navbar Style End */
+  font-family: "CustomFont";
+  src: url("asset/font/FONT RE4.ttf") format("truetype");
+  font-weight: 700;
+}
+
+body {
+  background-color: rgb(7, 7, 7);
+  color: white;
+  margin-top: 10%;
+}
+/* Navbar Style Start */
+.navbar {
+  font-family: "Castoro Titling", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+.navbar-nav a {
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+  color: white;
+  margin: 30px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar-nav a:hover {
+  text-shadow: 1px 1px rgb(255, 255, 255);
+  color: rgb(30, 30, 30);
+  transform: scale(1.1);
+}
+.navbar-extra button {
+  background: #7d1416;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.navbar-extra button:hover {
+  transform: scale(1.1);
+}
+.navbar-extra button a {
+  font-family: "Castoro Titling", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+/* Navbar Style End */
+
+h2 {
+  font-family: "Castoro Titling", sans-serif;
+  text-align: center;
+}
+input {
+  border-radius: 3px;
+  border-style: none;
+  height: 25px;
+}
+#weapon_name,
+#deskripsi {
+  background-color: rgba(255, 255, 255, 0.459);
+}
+#admin-section button {
+  font-family: "Castoro Titling", sans-serif;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgb(140, 23, 24);
+}
+#admin-section button:hover {
+  background-color: rgba(151, 24, 26, 0.703);
+}

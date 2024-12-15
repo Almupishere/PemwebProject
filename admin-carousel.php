@@ -104,6 +104,22 @@ $result = $connect->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="admin-carousel.css">
     <style>
         table {
@@ -111,11 +127,10 @@ $result = $connect->query($sql);
             border-collapse: collapse;
         }
         table, th, td {
-            border: 1px solid black;
+            border: 1px solid rgba(255, 255, 255, 0.459);;
         }
         th, td {
             padding: 10px;
-            text-align: left;
         }
         img {
             max-width: 100px;
@@ -143,9 +158,10 @@ $result = $connect->query($sql);
           <?php endif; ?>
         </nav>
     <h1>Halaman Admin - Carousel Resident Evil 4</h1>
+    <div class="data">
     <h2>Tambah Data Baru</h2>
     <form method="POST" action="" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Judul" required><br>
+        <input type="text" class="name" name="title" placeholder="Judul" required><br>
         <textarea name="description" placeholder="Deskripsi" required></textarea><br>
         <input type="file" name="image" accept="image/*" required><br>
         <button type="submit" name="add">Tambah</button>
@@ -198,6 +214,7 @@ $result = $connect->query($sql);
             <button type="submit" name="update">Update</button>
         </form>
     <?php endif; ?>
+    </div>
 
 </body>
 </html>

@@ -3,6 +3,16 @@
   src: url("asset/font/FONT RE4.ttf") format("truetype");
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -139,7 +149,7 @@ body {
   padding: 20px;
 }
 #topics {
-  background-image: url("asset/HOME/bg home.jpg");
+  background-image: url("asset/HOME/bg.jpg");
   font-family: "Teko", sans-serif;
   color: #d0121c;
 }
@@ -208,7 +218,7 @@ body {
 
 /* Trailer Styles Start */
 .section3 {
-  background-image: url("asset/HOME/bg home.jpg");
+  background-image: url("asset/HOME/bg.jpg");
 }
 .section3 h1 {
   font-family: "Teko", sans-serif;
@@ -325,7 +335,7 @@ body {
   height: 100vh;
 }
 #story {
-  background-image: url("asset/HOME/bg home.jpg");
+  background-image: url("asset/HOME/bg.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -454,7 +464,7 @@ body {
 
 /* Location Styles Start*/
 #location {
-  background-image: url("asset/HOME/bg home.jpg");
+  background-image: url("asset/HOME/bg.jpg");
   height: 100vh;
   flex-direction: column;
   align-items: center;
@@ -534,7 +544,7 @@ body {
 #gameplay {
   background: #010202;
   height: 250vh;
-  z-index: -1;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -559,6 +569,7 @@ body {
   z-index: 1;
 }
 #gameplay h1 {
+  color: #d0121c;
   font-size: 3rem;
   margin: 10px;
   font-family: "Teko", sans-serif;
@@ -571,7 +582,7 @@ body {
   justify-content: center;
 }
 .desc {
-  width: 75%;
+  width: 70%;
   text-align: center;
 }
 .gp-description p {
@@ -627,11 +638,15 @@ body {
   position: relative;
   top: 40%;
   left: 43%;
+  transition: transform 0.3s ease;
+}
+.play:hover {
+  transform: scale(1.1);
 }
 /* Gameplay Styles End*/
 
-/* Quiz Styles Start*/
-.section8 {
+/* Weapons Styles Start*/
+.section9 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -662,7 +677,13 @@ body {
     rgba(20, 33, 41, 0.194)
   );
 }
-
+#prev-btn,
+#next-btn {
+  background: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #a00e1a;
+}
 .footer {
   width: 100%;
   margin-top: auto;
@@ -675,4 +696,4 @@ body {
 .footer img {
   width: 50px;
 }
-/* Quiz Styles End*/
+/* Weapons Styles End*/

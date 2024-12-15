@@ -161,21 +161,21 @@ $connect->close();
             <button class="carousel-button" id="nextBtn">&gt;</button>
           </div>
           <div class="carousel-track">
-            <div class="carousel-item1"><div class="logo-yt"></div></div>
+            <div class="carousel-item1"><div class="logo-yt" data-url="https://youtu.be/Zb3iOQdeR9c?si=o1cDEFiD34ua8nm1"></div></div>
             <div class="carousel-item2">
               <div
                 class="logo-yt"
-                data-url="https://youtu.be/17lHF8U_du8?si=1wYpcuiREhfpgSGc"
+                data-url="https://youtu.be/Hv-o8TnJW0k?si=S82wBW1Ur9MB9Xzq"
               ></div>
             </div>
             <div class="carousel-item3">
               <div
                 class="logo-yt"
-                data-url="https://youtu.be/17lHF8U_du8?si=1wYpcuiREhfpgSGc"
+                data-url="https://youtu.be/tK_7dnU5OCU?si=zmXZhbeUSK-SMqqb"
               ></div>
             </div>
-            <div class="carousel-item4"><div class="logo-yt"></div></div>
-            <div class="carousel-item5"><div class="logo-yt"></div></div>
+            <div class="carousel-item4"><div class="logo-yt" data-url="https://youtu.be/wBO511lW_3g?si=tl-lRx7Np9Vil-0E"></div></div>
+            <div class="carousel-item5"><div class="logo-yt" data-url="https://youtu.be/4-rbWvdHvxY?si=VK2jFoxWwJyCx8C0"></div></div>
             <!-- Tambahkan elemen lainnya sesuai kebutuhan -->
           </div>
         </div>
@@ -301,7 +301,7 @@ $connect->close();
           <button id="nextButton">&gt;</button>
         </div>
       </div>
-      <div id="gameplay" class="section7">
+      <div id="gameplay" class="section8">
         <div class="gameplay-container">
           <h1>GAMEPLAY</h1>
           <p class="desc">
@@ -314,7 +314,7 @@ $connect->close();
           </p>
           <div class="carousel-container">
             <div class="carousel-item">
-              <div class="gameplay-img1"><div class="play"></div></div>
+              <div class="gameplay-img1"><div class="play" data-url="https://www.youtube.com/watch?v=xZ7R4f0Txew"></div></div>
               <div class="gp-description">
                 <p>
                   Knife Actions <br /><br />Pisaumu bukan hanya untuk menyerang.
@@ -326,11 +326,11 @@ $connect->close();
               </div>
             </div>
             <div class="carousel-item">
-              <div class="gameplay-img2"><div class="play"></div></div>
+              <div class="gameplay-img2"><div class="play" data-url="https://www.youtube.com/watch?v=gi5fF78eM4A"></div></div>
               <div class="gp-description">
                 <p>
                   Ranged Combat<br /><br />
-                  sudut pandang orang ketiga untuk membidik musuh secara akurat.
+                  Gunakan sudut pandang orang ketiga untuk membidik musuh secara akurat.
                   Tembakan tepat ke kepala atau kaki akan membuat musuh
                   kesulitan bergerak, memberikanmu kesempatan untuk menyerang
                   secara langsung tanpa perlu menembak lagi.
@@ -338,10 +338,10 @@ $connect->close();
               </div>
             </div>
             <div class="carousel-item">
-              <div class="gameplay-img3"><div class="play"></div></div>
+              <div class="gameplay-img3"><div class="play" data-url="https://www.youtube.com/watch?v=wg41CShnlfo"></div></div>
               <div class="gp-description">
                 <p>
-                  Third Person<br /><br />View Rasakan tantangan bertahan hidup
+                  Third Person View<br /><br />Rasakan tantangan bertahan hidup
                   yang lebih intens dengan kontrol modern. Setiap keputusan yang
                   kamu ambil akan sangat berpengaruh pada kelangsungan hidup
                   Leon.
@@ -351,7 +351,7 @@ $connect->close();
           </div>
         </div>
       </div>
-      <div id="konten" class="section8">
+      <div id="konten" class="section9">
         <div class="konten">
             <div id="weapon-gallery">
                 <?php foreach ($weapons as $index => $weapon): ?>
@@ -365,8 +365,8 @@ $connect->close();
 
           </div>
           <div id="navigation">
-              <button id="prev-btn" onclick="prev-btn">Prev</button>
-              <button id="next-btn" onclick="next-btn" >Next</button>
+              <button id="prev-btn" onclick="prev-btn">&lt;</button>
+              <button id="next-btn" onclick="next-btn" >&gt;</button>
           </div>
         <div class="footer">
             <p>&copy; 2024 CAPCOM. All Rights Reserved.</p>
@@ -391,7 +391,7 @@ $connect->close();
   });
 });
 
-document.querySelectorAll(".logo-yt").forEach(function (logo) {
+document.querySelectorAll(".logo-yt, .play").forEach(function (logo) {
   logo.addEventListener("click", function () {
     var url = logo.getAttribute("data-url");
     window.open(url, "_blank");
@@ -440,31 +440,30 @@ const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 let imgIndex = 0;
 
-function updateCarouselprev() {
-  imgTrack.style.transform = `translateX(${imgIndex * 250}px)`;
+function carouselUpdate() {
+  imgTrack.style.transform = `translateX(${imgIndex * 200}px)`;
+  imgTrack.style.transition = "transform 0.5s ease";
 }
 
-function updateCarouselnext() {
-  imgTrack.style.transform = `translateX(-${imgIndex * 250}px)`;
+function carouselUpdate2() {
+  imgTrack.style.transform = `translateX(${imgIndex * 350}px)`;
+  imgTrack.style.transition = "transform 0.5s ease";
 }
 
 prevButton.addEventListener("click", () => {
   if (imgIndex < 2) {
     imgIndex++;
-    updateCarouselprev();
-  } else if (imgIndex < 0) {
-    imgIndex++;
-    updateCarouselprev();
+    carouselUpdate();
   }
 });
 
 nextButton.addEventListener("click", () => {
   if (imgIndex > 0) {
     imgIndex--;
-    updateCarouselprev();
+    carouselUpdate();
   } else if (imgIndex == 0) {
     imgIndex--;
-    updateCarouselprev();
+    carouselUpdate2();
   }
 });
       /*location end*/
