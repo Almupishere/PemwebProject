@@ -637,13 +637,13 @@ body {
   align-items: center;
   width: 100%;
 }
-#quiz {
+#konten {
   font-family: "Jomolhari", sans-serif;
   height: 170vh;
   background-color: #010202;
   z-index: 1;
 }
-#quiz::after {
+#konten::after {
   content: "";
   display: block;
   position: absolute;
@@ -662,50 +662,7 @@ body {
     rgba(20, 33, 41, 0.194)
   );
 }
-.quiz-container {
-  border: 2px solid #d0121c;
-  width: 85%;
-  height: max-content;
-  max-width: 600px;
-  padding: 20px;
-  margin-top: 10%;
-}
-.quiz-header {
-  font-family: "Alike", sans-serif;
-  background-color: #d0121c;
-  padding: 10px;
-  text-align: center;
-  font-size: 2rem;
-  margin-top: -10%;
-}
-.quiz-question {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  text-align: center;
-}
-.quiz-image {
-  width: 50%;
-  margin: auto;
-  display: block;
-}
-.quiz-options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 40%;
-  gap: 50px;
-  margin-top: 5%;
-}
-.quiz-option {
-  border: 2px solid #d0121c;
-  border-radius: 50px;
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.quiz-option:hover {
-  background-color: #444;
-}
+
 .footer {
   width: 100%;
   margin-top: auto;
@@ -718,4 +675,5 @@ body {
 .footer img {
   width: 50px;
 }
-/* Quiz Styles End*/
+
+/* ini bagian hover character */

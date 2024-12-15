@@ -1,0 +1,231 @@
+/* Video background setup */
+.video-background {
+  position: absolute;  /* Position it relative to the body */
+  top: 0;
+  left: 0;
+  width: 100%;         /* Make it span the entire width */
+  height: 100%;        /* Make it span the entire height */
+  object-fit: cover;   /* Ensure the video covers the background */
+  z-index: -1;         /* Ensure the video stays behind the content */
+  background-size: contain;
+}
+/* Navbar */
+.navbar {
+  font-family: "Castoro Titling", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+/* Links in navbar */
+a {
+  text-decoration: none;
+}
+
+.navbar-nav a {
+  display: inline-block;
+  color: white;
+  margin: 0 30px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  color: rgb(30, 30, 30);
+  transform: scale(1.1);
+}
+
+/* Button in navbar */
+.navbar-extra button {
+  background: #7d1416;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.navbar-extra button:hover {
+  transform: scale(1.1);
+  background: #a31b1d;
+}
+
+.navbar-extra button a {
+  font-family: "Castoro Titling", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #020202;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.konten {
+  margin-top: 80px; /* Sesuai tinggi navbar */
+}
+
+/* Content section */
+.content-re {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(180, 39, 39, 0); /* Transparent background */
+  
+}
+
+.content {
+  text-align: center;
+}
+
+.logo .re img {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.logo .line {
+  width: 80%;
+  height: 2px;
+  background-color: #7d1416;
+  margin: 20px auto;
+}
+
+.logo .teks-download {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e5e5e5;
+  text-transform: uppercase;
+}
+
+/* Content container */
+.content-container {
+  padding: 10px 10px; /* Kurangi padding atas untuk mendekatkan konten dengan footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #3a393900;
+  margin-top: 70vh; /* Pastikan tidak ada margin bawah yang menyebabkan jarak berlebih */
+}
+
+.platform-selection {
+  margin-bottom: 30px;
+  background: #3a3939; /* Solid background for platform section */
+  height: 150px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.platform-selection h1 {
+  font-size: 28px;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+}
+
+/* Platform buttons */
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Agar responsif */
+  gap: 30px;
+}
+
+.platform-buttons img {
+  width: 160px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.platform-buttons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Game box */
+.game-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #4947474f;
+  border-radius: 10px;
+  width: 40%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.game-box img {
+  width: 400px;
+  height: auto;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Download button */
+.download-button {
+  display: inline-block;
+  background: #7d1416;
+  color: white;
+  padding: 20px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+  margin: 0 auto;
+  text-align: center; /* Agar teks atau gambar terpusat */
+  width: 350px; /* Set lebar tombol secara tetap */
+}
+
+.download-button:hover {
+  transform: scale(1.1);
+  background: #a31b1d;
+}
+
+/* Footer banner */
+.footer-banner {
+  margin-top: 20px; /* Mengurangi margin-top untuk mengurangi jarak ke bawah */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-banner img {
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .platform-buttons img {
+    width: 80px;
+  }
+
+  .game-box img {
+    width: 90%;
+  }
+
+  .footer-banner img {
+    width: 90%;
+  }
+}

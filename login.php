@@ -9,18 +9,18 @@ if (isset($_POST['submit'])) {
     if ($username==NULL || $password==NULL) {
         echo("<script>alert('username dan password tidak boleh kosong');</script>");
         header('Location:login.php');
+        exit();
     }else {
         $result = mysqli_query($connect, "SELECT * FROM user WHERE username = '$username' AND password = '$password'");
         $_SESSION['username'] = $username;
         if (mysqli_num_rows($result)  == true) {
-            header("Location: home.php");
+            header("Location: homepage.php");
             exit();
         }else {
                 echo "<script>alert('Username atau password salah');</script>";
             }
     }
 
-    // ini untuk mengecek akun
     if (!isset($_SESSION['username'])) {
         header("Location: login.php");
         exit(); 
