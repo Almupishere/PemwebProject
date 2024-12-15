@@ -26,24 +26,25 @@ const characterVoices = {
       console.warn(`Tidak ada suara untuk karakter: ${characterName}`);
     }
   }
-  
-  // Menambahkan event listener untuk karakter
-  const characterItems = document.querySelectorAll(".character-item");
-  characterItems.forEach((item) => {
-    const characterName = item.querySelector(".name")?.textContent;
-    if (characterName) {
-      // Event klik untuk memutar suara
-      item.addEventListener("click", () => playVoice(characterName));
-  
-      // Event hover untuk efek
-      item.addEventListener("mouseenter", () => {
-        item.style.transform = "scale(1.1)"; // Perbesar saat hover
-        item.style.transition = "transform 0.3s ease";
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Dapatkan semua elemen karakter
+    const characterItems = document.querySelectorAll('.character-item');
+
+    // Loop melalui setiap elemen karakter
+    characterItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const audioFile = item.getAttribute('data-audio'); // Ambil data audio dari atribut
+        if (audioFile) {
+          const audio = new Audio(audioFile);
+          audio.play(); // Mainkan suara
+        } else {
+          alert('Tidak ada suara yang terhubung dengan karakter ini.');
+        }
       });
-  
-      item.addEventListener("mouseleave", () => {
-        item.style.transform = "scale(1)"; // Kembali ke ukuran normal
-      });
-    }
+    });
   });
+
+
+  
   

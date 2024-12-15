@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Click with Sound</title>
+    <style>
+        .clickable-img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .clickable-img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Klik Gambar untuk Mendengar Suara</h1>
+    <img src="example.jpg" alt="Gambar Klik" class="clickable-img" onclick="playSound()">
+
+    <!-- Elemen Audio -->
+    <audio id="clickSound">
+        <source src="asset/sounds/albert.mp3" type="audio/mpeg">
+        <source src="click.ogg" type="audio/ogg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script>
+        function playSound() {
+            const sound = document.getElementById('clickSound');
+            sound.play(); // Memutar suara
+        }
+    </script>
+</body>
+</html>
